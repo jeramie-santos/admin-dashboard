@@ -51,6 +51,10 @@ nav ul a {
     text-decoration: none;
     font-weight: 700;
     font-size: 1.12rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
 }
 
 .nav-title {
@@ -138,11 +142,6 @@ header {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
-}
-
-.user-account img {
-    width: 50px;
-    border-radius: 50%;
 }
 
 .user-account p {
@@ -275,7 +274,7 @@ main {
     align-items: center;
 }
 
-.trending.card img {
+.profile-picture {
     width: 50px;
     border-radius: 50%;
 } 
@@ -284,4 +283,10 @@ main {
 .username p + p,
 .announcement.card p {
     color: var(--sub-font-color);
+}
+
+.nav-icons,
+.header-icons {
+    /* background-color: white; */
+    font-size: 1.3rem;
 }
