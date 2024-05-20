@@ -17,7 +17,7 @@ html {
     --secondary-bg-color: #DBE2EF;
     --accent-bg-color: #3F72AF;
     --font-color: #112D4E;
-    --sub-font-color: #194374;
+    --sub-font-color: #1d5798;
 }
 
 .main-container {
@@ -96,7 +96,7 @@ h1 {
 
 .container {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: .5fr 3fr;
     color: var(--font-color);
 }
 
@@ -107,7 +107,7 @@ header {
     background-color: var(--primary-bg-color);
     padding: .5rem 2rem;
     display: grid;
-    grid-template: 1fr 1fr / 1fr;
+    grid-template: repeat(2, 1fr) / 1fr;
     box-shadow: 0px 3px 3px  rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
@@ -115,6 +115,7 @@ header {
 .header-top {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    align-content: center;
 }
 
 .search {
@@ -124,7 +125,7 @@ header {
 }
 
 .search input {
-    width: 90%;
+    width: 80%;
     padding: .5rem 1.5rem;
     outline: none;
     border: 1px solid var(--secondary-bg-color);
@@ -139,6 +140,7 @@ header {
 }
 
 .user-account {
+    place-self: end;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -164,7 +166,8 @@ header {
 }
 
 .user-info img {
-    width: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
@@ -183,23 +186,23 @@ header {
 .buttons {
     display: flex;
     gap: 2.5rem;
-    align-items: center;
-    justify-content: center;
+    justify-content: end;
 }
 
 button {
-    padding: .5rem 1.5rem;
+    padding: .6rem 1.6rem;
     border-radius: 2rem;
     background-color: var(--accent-bg-color);
     color: var(--primary-bg-color);
     border: 1px solid var(--accent-bg-color);
     font-family: inherit;
+    font-weight: 700;
 }
 
 
 
 
-
+/* Main COntent */
 
 main {
     padding: 1.5rem;
@@ -221,16 +224,15 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
-
 }
 
 .content-card {
     background-color: var(--primary-bg-color);
     border-radius: 8px 1rem 1rem 8px;
     padding: 2rem;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.1);
     border-left: 8px solid var(--accent-bg-color);
     display: grid;
     grid-template: auto 1fr auto / 1fr;
@@ -242,7 +244,6 @@ main {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1rem;
-    
 }
 
 .main-right {
@@ -255,7 +256,7 @@ main {
 .card {
     background-color: var(--primary-bg-color);
     border-radius: 1rem;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.1);
     padding: 2rem;
 }
 
@@ -274,6 +275,16 @@ main {
     font-size: .7rem;
 }
 
+.first-announcement,
+.second-announcement {
+    border-bottom: 1px solid darkgray;
+}
+
+.first-announcement p,
+.second-announcement p {
+   margin-bottom: 1rem;
+}
+
 .trending.card {
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr / 1fr;
@@ -288,6 +299,7 @@ main {
 
 .profile-picture {
     width: 50px;
+    height: 50px;
     border-radius: 50%;
 } 
 
