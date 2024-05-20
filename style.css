@@ -134,9 +134,9 @@ header {
     color: var(--font-color);
 }
 
-/* .search input:focus {
-    border: 1px solid black;
-} */
+.search input:focus {
+    border: 1px solid var(--accent-bg-color);
+}
 
 .user-account {
     display: grid;
@@ -228,10 +228,21 @@ main {
 
 .content-card {
     background-color: var(--primary-bg-color);
-    border-radius: 1rem;
+    border-radius: 8px 1rem 1rem 8px;
     padding: 2rem;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-    border-left: 1rem solid var(--accent-bg-color);
+    border-left: 8px solid var(--accent-bg-color);
+    display: grid;
+    grid-template: auto 1fr auto / 1fr;
+    gap: .5rem;
+}
+
+.content-icons {
+    place-self: end;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    
 }
 
 .main-right {
@@ -287,7 +298,8 @@ main {
 }
 
 .nav-icons,
-.header-icons {
+.header-icons,
+.content-icons {
     /* background-color: var(--primary-bg-color); */
     font-size: 1.3rem;
 }
