@@ -13,10 +13,11 @@ html {
 }
 
 :root {
-    --primary-bg-color: #1992d4;
-    --secondary-bg-color: #e2e8f0;
-    --accent-color: #facc15;
-    --sub-font-color: #636363;
+    --primary-bg-color: #F9F7F7;
+    --secondary-bg-color: #DBE2EF;
+    --accent-bg-color: #3F72AF;
+    --font-color: #112D4E;
+    --sub-font-color: #194374;
 }
 
 .main-container {
@@ -28,15 +29,13 @@ html {
 /* sidebar */
 
 nav {
-    background-color: var(--primary-bg-color);
+    background-color: var(--accent-bg-color);
     grid-column: 1 / 2;
-    color: white;
+    color: var(--primary-bg-color);
     padding: 2rem;
     display: grid;
     grid-template: .5fr 2fr 3fr / 1fr;
     gap: 2rem;
-    box-shadow: 2px 0px 3px  rgba(128, 128, 128, .4);
-    z-index: 2;
 }
 
 
@@ -47,7 +46,7 @@ nav ul {
 }
 
 nav ul a {
-    color: white;
+    color: var(--primary-bg-color);
     text-decoration: none;
     font-weight: 700;
     font-size: 1.12rem;
@@ -85,7 +84,7 @@ nav ul a {
 }
 
 .box {
-    background-color: white;
+    background-color: var(--primary-bg-color);
 }
 
 h1 {
@@ -98,18 +97,19 @@ h1 {
 .container {
     display: grid;
     grid-template-rows: 1fr 4fr;
+    color: var(--font-color);
 }
 
 /* Header */
 
 header {
     grid-area: 1 / 1 / 2 / 2;
-    background-color: white;
+    background-color: var(--primary-bg-color);
     padding: .5rem 2rem;
     display: grid;
     grid-template: 1fr 1fr / 1fr;
-    box-shadow: 0px 3px 3px  rgba(128, 128, 128, .4);
-    z-index: 2;
+    box-shadow: 0px 3px 3px  rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 .header-top {
@@ -131,6 +131,7 @@ header {
     background-color: var(--secondary-bg-color);
     border-radius: 2rem;
     font-family: inherit;
+    color: var(--font-color);
 }
 
 /* .search input:focus {
@@ -189,9 +190,9 @@ header {
 button {
     padding: .5rem 1.5rem;
     border-radius: 2rem;
-    background-color: var(--primary-bg-color);
-    color: white;
-    border: 1px solid var(--primary-bg-color);
+    background-color: var(--accent-bg-color);
+    color: var(--primary-bg-color);
+    border: 1px solid var(--accent-bg-color);
     font-family: inherit;
 }
 
@@ -226,11 +227,11 @@ main {
 }
 
 .content-card {
-    background-color: white;
+    background-color: var(--primary-bg-color);
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: 3px 3px 5px 2px rgba(128, 128, 128, .2);
-    border-left: 1rem solid var(--primary-bg-color);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border-left: 1rem solid var(--accent-bg-color);
 }
 
 .main-right {
@@ -241,9 +242,9 @@ main {
 
 
 .card {
-    background-color: white;
+    background-color: var(--primary-bg-color);
     border-radius: 1rem;
-    box-shadow: 3px 3px 5px 2px rgba(128, 128, 128, .2);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     padding: 2rem;
 }
 
@@ -287,6 +288,6 @@ main {
 
 .nav-icons,
 .header-icons {
-    /* background-color: white; */
+    /* background-color: var(--primary-bg-color); */
     font-size: 1.3rem;
 }
