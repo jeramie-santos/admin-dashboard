@@ -42,7 +42,7 @@ nav {
 nav ul {
     list-style: none;
     display: grid;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 nav ul a {
@@ -54,6 +54,15 @@ nav ul a {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 1rem;
+}
+
+nav ul li {
+    padding: .5rem 1rem;
+}
+
+nav ul li:hover {
+    background-color: var(--sub-font-color);
+    border-radius: .5rem;
 }
 
 .nav-title {
@@ -199,6 +208,11 @@ button {
     font-weight: 700;
 }
 
+button:hover {
+    background-color: var(--sub-font-color);
+    cursor: pointer;
+}
+
 
 
 
@@ -244,6 +258,11 @@ main {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1rem;
+}
+
+.content-icons .fa-regular:hover,
+.content-icons .fa-solid:hover {
+    cursor: pointer;
 }
 
 .main-right {
@@ -297,6 +316,10 @@ main {
     align-items: center;
 }
 
+.trending-account:hover {
+    cursor: pointer;
+}
+
 .profile-picture {
     width: 50px;
     height: 50px;
@@ -312,6 +335,9 @@ main {
 .nav-icons,
 .header-icons,
 .content-icons {
-    /* background-color: var(--primary-bg-color); */
     font-size: 1.3rem;
+}
+
+.header-icons:hover {
+    cursor: pointer;
 }
